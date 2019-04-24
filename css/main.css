@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade|Rubik:500");
 body {
   background-color: #48b3f8;
   background-repeat: no-repeat;
@@ -5,11 +6,84 @@ body {
   background-size: cover;
 }
 
+body header {
+  background-color: #1c92e0be;
+  -webkit-box-shadow: 0 50vh -10vh 50vh #1c92e0be;
+          box-shadow: 0 50vh -10vh 50vh #1c92e0be;
+  width: 100%;
+  margin: 0px;
+}
+
+body header div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 body header div h1 {
+  width: 100%;
+  display: block;
   font-family: "Bungee Shade", cursive;
-  font-size: 5rem;
+  font-size: 6rem;
+  font-stretch: expanded;
   color: #ffffff;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 2rem;
+}
+
+body .content-list .story-page {
+  background-color: #ffffff;
+  border-left: #ffffff 1rem solid;
+  border-right: #ffffff 1rem solid;
+  border-bottom: #ffffff 1rem solid;
+  border-radius: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10rem 18rem;
+  padding: 3rem 3rem;
+}
+
+body .content-list .story-page .lib-1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+body footer {
+  background-color: #1c92e0be;
+  -webkit-box-shadow: 0 50vh 0vh 50vh #1c92e0be;
+          box-shadow: 0 50vh 0vh 50vh #1c92e0be;
+  width: 100%;
+  margin: 0px;
+}
+
+body footer div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body footer div h1 {
+  width: 100%;
+  display: block;
+  padding: 0px;
+  font-size: 1rem;
+  font-stretch: expanded;
+  color: #000000e7;
+  text-align: center;
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=main.css.map */

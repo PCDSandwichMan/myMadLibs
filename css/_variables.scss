@@ -1,7 +1,13 @@
-// ! Colors
+// ! Fonts Imports
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Rubik:500');
 
+// ! Development Stuff
+$testBorder: solid red 2px;
+
+// ! Color
 $mainBlue: #48b3f8;
+$headerBlue: #1c92e0be;
 
 // ! Fonts
-
-$headerFont: 'Bungee Shade', cursive;
+$headerFont: "Bungee Shade", cursive;
+$storyFont: "Rubik", sans-serif;
