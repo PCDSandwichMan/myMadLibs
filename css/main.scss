@@ -1,0 +1,28 @@
+@import "_variables.scss";
+
+// ? Just for devoplment
+// * {
+//     border: red solid 2px;
+//     margin-top: 0px;
+//     box-sizing: border-box;
+// }
+
+
+body {
+    background-color: $mainBlue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    header {
+        div {
+            h1 {
+                font-family: $headerFont;
+                font-size: 5rem;
+                color: #ffffff;
+                text-align: center;
+                margin-top: 0px;
+                
+            }
+        }
+    }
+}
