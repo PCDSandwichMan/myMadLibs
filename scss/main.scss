@@ -1,4 +1,5 @@
-@import "helpers/variables";
+@import 'helpers/variables';
+@import 'helpers/placeholders';
 
 // ? Just for development
 // * {
@@ -6,12 +7,13 @@
 //     margin-top: 0px;
 //     box-sizing: border-box;
 // }
-
+// ! Full Body
 body {
   background-color: $mainBlue;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  // ! Header Section
   header {
     background-color: $headerBlue;
     box-shadow: 0 50vh -10vh 50vh $headerBlue;
@@ -34,28 +36,29 @@ body {
       }
     }
   }
+  // ! All Stories
   .content-list {
-    .story-page {
-      background-color: #ffffff;
-      border: #ffffff 1rem solid;
-      border-radius: 3%;
-      display: flex;
-      flex-direction: column;
-      margin: 10rem 18rem;
-      padding: 3rem 3rem;
+    .lib-1 {
+      @extend %storyPageLayout;
       .title {
-        display: inline-block;
+        display: block;
         font-size: 2em;
         font-family: $storyFont;
-        bo
-        .lib-1 {
-          font-family: $storyFont;
-          font-size: 1.5em;
-          line-height: 2em;
-        }
+        border-bottom: #000000 double 2px;
+        width: 75%;
+        margin-bottom: 2em;
+      }
+      .question {
+        font-family: $storyFont;
+        font-size: 1.3em;
+        line-height: 2em;
+      }
+      h4 {
+        padding-bottom: 2em;
       }
     }
   }
+  // ! Footer Section
   footer {
     background-color: $headerBlue;
     box-shadow: 0 50vh 0vh 50vh $headerBlue;
