@@ -2,12 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Rubik:500');
 
 // ! Development Stuff
-$testBorder: solid red 2px;
+$testBorder: solid red 2px !important;
 
 // ! Color
-$mainBlue: #48b3f8;
-$headerBlue: #1c92e0be;
+$headerBlue: #1c92e036;
+$mainBlue: #1c92e09d;
+$footerBlue: #1c92e09d;
 
 // ! Fonts
-$headerFont: "Bungee Shade", cursive;
-$storyFont: "Rubik", sans-serif;
+$headerFont: 'Bungee Shade', cursive;
+$storyFont: 'Rubik', sans-serif;
+
+// ! Margins
+$questionInputMargins: 0.2em 10%;

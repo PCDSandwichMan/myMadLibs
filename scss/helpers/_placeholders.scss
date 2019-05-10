@@ -1,7 +1,46 @@
-%storyPageLayout {
-  background-color: #ffffff;
-  border: #ffffff 1rem solid;
+%storyPageBackground {
+  background-color: $mainBlue;
+  border: $mainBlue 0.3125rem solid;
   border-radius: 3%;
-  margin: 10rem 18rem;
-  padding: 3rem 3rem;
+  margin: 10rem 13rem;
+  padding: 1rem 1rem;
+  align-content: center;
+}
+
+%storyBox {
+  background: whitesmoke;
+  padding: 1rem 1rem;
+  border: whitesmoke 0.3125rem solid;
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+%libText {
+  width: 100%;
+  font-size: 1.7em;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  color: #000000;
+  padding-right: 17rem;
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+}
+
+%libQuestionsForm {
+  display: flex;
+  flex-direction: column;
+  font-family: $storyFont;
+  font-size: 1.5rem;
+}
+
+%libQuestionsInput {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  height: 2rem;
+  width: 75%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  border: 2px solid #00000093;
 }

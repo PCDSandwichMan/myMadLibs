@@ -22,36 +22,161 @@
       </header>
     </header>
     <main>
-      <div class="content-list">
-        <section class="lib-1">
-          <h2 class="title">Strange Quiz show</h2>
-          <h3 class="question">Q1. What animal would you eat on Christmas eve?</h3>
-          <h4>You said ~~~</h4>
-          <!--  -->
-          <h3 class="question">Q2. How often do you poo on the carpet?</h3>
-          <h4>You said once every ~~~</h4>
-          <!--  -->
-          <h3 class="question">Q3. What is 1 plus 1?</h3>
-          <h4>You said ~~~</h4>
-          <!--  -->
-          <h3 class="question">Q4. If you found an abandoned human what would you do?</h3>
-          <h4>You said ~~~ them </h4>
-          <!--  -->
-          <h3 class="question">Q6. How much did you weigh when you were born?</h3>
-          <h4>You said ~~~</h4>
-          <!--  -->
-          <h3 class="question">Q7. Which part of your body would you show to your mom?</h3>
-          <h4>You said ~~~</h4>
-          <!--  -->
-          <h3 class="question">Q8. Have you answered all the above questions honestly?</h3>
-          <h4>You said ~~~</h4>
+      <div class="lib-1">
+        <!-- ? User Answers Section -->
+        <section class="answer-page">
+          <div class="storyBox">
+            <h1 class="title">VACATIONS</h1>
+            <!-- ! DON'T ADD CLASS HIDE TO AN ID -->
+            <div id="storyText" class="hide">
+              <!-- ! Final text -->
+            </div>
+            <button
+              type="submit"
+              class="button hide"
+              id="reset"
+              onClick="window.location.reload()"
+            >
+              Play Again?
+            </button>
+
+            <!-- ! Questions -->
+            <div id="questionText">
+              <form>
+                ADJECTIVE
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i1"
+                />
+                ADJECTIVE
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i2"
+                />
+                NOUN
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i3"
+                />
+                NOUN
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i4"
+                />
+                PLURAL NOUN
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i5"
+                />
+                GAME
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i6"
+                />
+                PLURAL NOUN
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i7"
+                />
+                VERB ENDING IN “ING”
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i8"
+                />
+                VERB ENDING IN “ING”
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i9"
+                />
+                PLURAL NOUN
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i10"
+                />
+                VERB ENDING IN “ING”
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i11"
+                />
+                NOUN
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i12"
+                />
+                PLANT
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i13"
+                />
+                PART OF THE BODY
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i14"
+                />
+                A PLACE
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i15"
+                />
+                VERB ENDING IN “ING”
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i16"
+                />
+                ADJECTIVE
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i17"
+                />
+                NUMBER
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i18"
+                />
+                PLURAL NOUN
+                <input
+                  type="text"
+                  placeholder="...The choice is yours..."
+                  id="i19"
+                />
+              </form>
+              <button class="button" type="submit" onClick="madLibGenerator()">
+                PRESS ME!!!
+              </button>
+              <button class="button" type="submit" onClick="generateRandom()">
+                Randomize
+              </button>
+            </div>
+          </div>
         </section>
+
+        <!-- ? Question Section -->
+        <!-- TODO take a look at splash images -->
       </div>
     </main>
     <footer>
       <div>
-        <h1>&copyWanna Be Mad Lib Labs</h1>
+        <h1>&copy 2019 MadLibsRELOADED | All Rights Reserved.</h1>
       </div>
     </footer>
+    <script src="./javascript/main.js"></script>
   </body>
 </html>

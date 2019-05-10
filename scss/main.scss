@@ -1,84 +1,146 @@
 @import 'helpers/variables';
 @import 'helpers/placeholders';
 
-// ? Just for development
-// * {
-//     border: red solid 2px;
-//     margin-top: 0px;
-//     box-sizing: border-box;
+// TODO implement for future media queries
+// section {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
 // }
+
+//! Reset
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 // ! Full Body
 body {
-  background-color: $mainBlue;
+  background-image: url('../images/starsBackground.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // ! Header Section
-  header {
-    background-color: $headerBlue;
-    box-shadow: 0 50vh -10vh 50vh $headerBlue;
+}
+// ! Header Section
+header {
+  background-color: $headerBlue;
+  box-shadow: 0 50vh -10vh 50vh $headerBlue;
+  width: 100%;
+  div {
     width: 100%;
-    margin: 0px;
-    div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    h1 {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      h1 {
-        width: 100%;
-        display: block;
-        font-family: $headerFont;
-        font-size: 6rem;
-        font-stretch: expanded;
-        color: #ffffff;
+      display: block;
+      font-family: $headerFont;
+      font-size: 6rem;
+      font-stretch: expanded;
+      color: rgb(238, 229, 229);
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+// ! All Stories
+.hide {
+  display: none;
+}
+// ! Main Story
+.answer-page {
+  @extend %storyPageBackground;
+
+  .storyBox {
+    @extend %storyBox;
+
+    .title {
+      font-size: 3em;
+      font-family: $storyFont;
+      border-bottom: #000000dc double 2px;
+      width: 75%;
+      margin-bottom: 1rem;
+    }
+
+    #storyText {
+      @extend %libText;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+    .button {
+      background-color: rgba(0, 0, 255, 0.863);
+      color: whitesmoke;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      font-family: $storyFont;
+      text-align: center;
+      font-size: 16px;
+      width: 25%;
+      &:hover {
+        background-color: rgb(8, 8, 233);
+        box-shadow: 1px 1px 2px blue;
+      }
+    }
+
+    // ! Questions
+    #questionText {
+      form {
+        @extend %libQuestionsForm;
+
+        input {
+          @extend %libQuestionsInput;
+        }
+      }
+
+      button:focus {
+        outline: 0;
+      }
+      .button {
+        background-color: rgba(0, 0, 255, 0.863);
+        color: whitesmoke;
+        padding: 1rem 2rem;
+        margin-left: 0.5rem;
+        border-radius: 15px;
+        font-family: $storyFont;
         text-align: center;
-        margin-top: 2rem;
+        font-size: 16px;
+        &:hover {
+          background-color: rgb(8, 8, 233);
+          box-shadow: 1px 1px 2px blue;
+        }
       }
     }
   }
-  // ! All Stories
-  .content-list {
-    .lib-1 {
-      @extend %storyPageLayout;
-      .title {
-        display: block;
-        font-size: 2em;
-        font-family: $storyFont;
-        border-bottom: #000000 double 2px;
-        width: 75%;
-        margin-bottom: 2em;
-      }
-      .question {
-        font-family: $storyFont;
-        font-size: 1.3em;
-        line-height: 2em;
-      }
-      h4 {
-        padding-bottom: 2em;
-      }
-    }
-  }
-  // ! Footer Section
-  footer {
-    background-color: $headerBlue;
-    box-shadow: 0 50vh 0vh 50vh $headerBlue;
+}
+
+// ! Footer Section
+footer {
+  background-color: $footerBlue;
+  box-shadow: 0 50vh 0vh 50vh $footerBlue;
+  width: 100%;
+  margin: 0px;
+  div {
     width: 100%;
-    margin: 0px;
-    div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    h1 {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      h1 {
-        width: 100%;
-        display: block;
-        padding: 0px;
-        font-size: 1rem;
-        font-stretch: expanded;
-        color: #000000e7;
-        text-align: center;
-        margin-top: 2rem;
-      }
+      display: block;
+      padding: 1.2rem;
+      font-size: 1rem;
+      font-stretch: expanded;
+      color: #000000e7;
+      text-align: center;
     }
   }
+}
+
+// ! All testing
+.testStuff {
+  background-color: red;
 }
