@@ -1,4 +1,3 @@
-// TODO add import for randomizer
 const missingInput = 'Please fill all input options.';
 
 let storyOne =
@@ -15,7 +14,7 @@ function inputArrayGen() {
   }
 }
 
-// ? Replaces the tildas with user input
+// ? Replaces the tildes with user input
 function createMadLib() {
   let arrIndex = 0;
   for (i = 1; i <= madLibTextArray.length; ++i) {
@@ -26,11 +25,11 @@ function createMadLib() {
   document.getElementById('storyText').innerHTML = madLibTextArray.join(' ');
 }
 
-console.log(userInput);
 // ? Check for edges case if user does not enter input
 function madLibGenerator() {
   inputArrayGen();
-  if (userInput[0] === '') {
+  //TODO fix the conditional to make sure all are filled
+  if (userInput[18] === '') {
     document.getElementById('storyText').innerHTML = missingInput;
     document.getElementById('questionText').classList.add('hide');
     document.getElementById('reset').classList.remove('hide');
@@ -44,19 +43,20 @@ function madLibGenerator() {
 }
 
 // ! TEST / RANDOMIZE BUTTONS
+
 function generateRandom() {
-  let spot = 1;
   for (i = 1; i <= 19; ++i) {
-    document.getElementById('i' + i).value = 'TEST' + spot;
-    ++spot;
+    document.getElementById('i' + i).value = 'TEST' + i;
   }
 }
 
-// function generateRandomInput() {
-//   let spot = 1;
-//   for (i = 1; i <= 19; ++i) {
-//     document.getElementById('i' + i).value = 'TEST' + spot;
-
-//     ++spot;
-//   }
-// }
+function generateRandomInput() {
+  for (i = 1; i <= 19; ++i) {
+    let temp = document.getElementById('i' + i);
+    let listItem = temp.name;
+    let randomArrLength = randomInput[listItem].length;
+    let randomIndex = Math.floor(Math.random() * randomArrLength);
+    //? Takes a random item from other file array and inputs
+    temp.value = randomInput[listItem][randomIndex];
+  }
+}
