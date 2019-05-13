@@ -35,7 +35,8 @@
               type="submit"
               class="button hide"
               id="reset"
-              onClick="window.location.reload()"
+              onClick="resetReload()"
+              href="#"
             >
               Play Again?
             </button>
@@ -57,14 +58,14 @@
                   placeholder="...The choice is yours..."
                   id="i2"
                 />
-                NOUN
+                COMMON NOUN (PLACE)
                 <input
                   type="text"
                   name="noun"
                   placeholder="...The choice is yours..."
                   id="i3"
                 />
-                NOUN
+                COMMON NOUN (PLACE)
                 <input
                   type="text"
                   name="noun"
@@ -120,7 +121,7 @@
                   placeholder="...The choice is yours..."
                   id="i11"
                 />
-                NOUN
+                COMMON NOUN (PLACE)
                 <input
                   type="text"
                   name="noun"
@@ -141,7 +142,7 @@
                   placeholder="...The choice is yours..."
                   id="i14"
                 />
-                A PLACE
+                PROPER NOUN (PLACE)
                 <input
                   type="text"
                   name="place"
@@ -177,7 +178,10 @@
                   id="i19"
                 />
               </form>
-              <button class="button" type="submit" onClick="madLibGenerator()">
+              <button 
+              class="button" 
+              type="submit" 
+              onClick="madLibGenerator()">
                 Create Vacation
               </button>
               <button
@@ -202,6 +206,5 @@
     </footer>
     <script src="main.js"></script>
     <script src="javascript/randomInput.js"></script>
-
   </body>
 </html>

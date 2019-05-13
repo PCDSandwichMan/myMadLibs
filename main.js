@@ -7,19 +7,25 @@ let storyOne =
 let madLibTextArray = storyOne.split(' '); // split current
 let userInput = []; // user input
 
+// ? for converting userInput below for story (readability)
+const toUpper = function(x) {
+  return x.toUpperCase().bold();
+};
+
 // ? Stores user input in an array
 function inputArrayGen() {
   for (i = 1; i <= 19; ++i) {
     userInput[i - 1] = document.getElementById('i' + i).value;
   }
 }
-
+console.log(userInput);
 // ? Replaces the tildes with user input
 function createMadLib() {
   let arrIndex = 0;
+  let userInputLoop = userInput.map(toUpper);
   for (i = 1; i <= madLibTextArray.length; ++i) {
     let matchIndex = madLibTextArray.indexOf('~');
-    madLibTextArray[matchIndex] = userInput[arrIndex];
+    madLibTextArray[matchIndex] = userInputLoop[arrIndex];
     arrIndex++;
   }
   document.getElementById('storyText').innerHTML = madLibTextArray.join(' ');
@@ -29,7 +35,8 @@ function createMadLib() {
 function madLibGenerator() {
   inputArrayGen();
   //TODO fix the conditional to make sure all are filled
-  if (userInput[18] === '') {
+  window.scrollTo(0, 320);
+  if (userInput.includes('')) {
     document.getElementById('storyText').innerHTML = missingInput;
     document.getElementById('questionText').classList.add('hide');
     document.getElementById('reset').classList.remove('hide');
@@ -42,13 +49,11 @@ function madLibGenerator() {
   }
 }
 
-// ! TEST / RANDOMIZE BUTTONS
-
-function generateRandom() {
-  for (i = 1; i <= 19; ++i) {
-    document.getElementById('i' + i).value = 'TEST' + i;
-  }
+function resetReload() {
+  window.scrollTo(0, 0);
+  window.location.reload();
 }
+// ! RANDOMIZE BUTTON
 
 function generateRandomInput() {
   for (i = 1; i <= 19; ++i) {
@@ -57,6 +62,6 @@ function generateRandomInput() {
     let randomArrLength = randomInput[listItem].length;
     let randomIndex = Math.floor(Math.random() * randomArrLength);
     //? Takes a random item from other file array and inputs
-    temp.value = randomInput[listItem][randomIndex];
+    temp.value = randomInput[listItem][randomIndex].toUpperCase();
   }
 }
