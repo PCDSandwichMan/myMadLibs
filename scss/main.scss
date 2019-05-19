@@ -233,7 +233,7 @@ footer {
 }
 
 // ? Pixel 2
-@media only screen and (max-device-width: 411px) {
+@media only screen and (min-width: 361px) and (max-device-width: 411px) {
   // ! Header Section
   header {
     div {
@@ -308,7 +308,7 @@ footer {
 }
 
 // ? IPad
-@media only screen and (max-device-width: 768px) {
+@media only screen and (min-width: 412px) and (max-device-width: 768px) {
   // ! Header Section
   header {
     div {
@@ -382,7 +382,7 @@ footer {
 }
 
 // ? IPad Pro
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-device-width: 1024px) {
   // ! Header Section
   header {
     div {
