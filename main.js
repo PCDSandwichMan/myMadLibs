@@ -18,7 +18,6 @@ function inputArrayGen() {
     userInput[i - 1] = document.getElementById('i' + i).value;
   }
 }
-console.log(userInput);
 // ? Replaces the tildes with user input
 function createMadLib() {
   let arrIndex = 0;
@@ -39,6 +38,7 @@ function madLibGenerator() {
   if (userInput.includes('')) {
     document.getElementById('storyText').innerHTML = missingInput;
     document.getElementById('questionText').classList.add('hide');
+    document.getElementById('questionButtons').classList.add('hide');
     document.getElementById('reset').classList.remove('hide');
     document.getElementById('storyText').classList.remove('hide');
   } else {
@@ -46,6 +46,7 @@ function madLibGenerator() {
     document.getElementById('storyText').classList.remove('hide');
     document.getElementById('reset').classList.remove('hide');
     document.getElementById('questionText').classList.add('hide');
+    document.getElementById('questionButtons').classList.add('hide');
   }
 }
 

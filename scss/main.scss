@@ -68,10 +68,10 @@ header {
       @extend %libText;
     }
 
-    button:focus {
+    .answerButton:focus {
       outline: 0;
     }
-    .button {
+    .answerButton {
       background-color: rgba(0, 0, 255, 0.863);
       color: whitesmoke;
       padding: 1rem 2rem;
@@ -96,23 +96,22 @@ header {
           @extend %libQuestionsInput;
         }
       }
-
-      button:focus {
-        outline: 0;
-      }
-      .button {
-        background-color: rgba(0, 0, 255, 0.863);
-        color: whitesmoke;
-        padding: 1rem 2rem;
-        margin-left: 0.5rem;
-        border-radius: 15px;
-        font-family: $storyFont;
-        text-align: center;
-        font-size: 16px;
-        &:hover {
-          background-color: rgb(8, 8, 233);
-          box-shadow: 1px 1px 2px blue;
-        }
+    }
+    button:focus {
+      outline: 0;
+    }
+    .button {
+      background-color: #0000ffdc;
+      color: whitesmoke;
+      padding: 1rem 2rem;
+      margin-left: 0.5rem;
+      border-radius: 15px;
+      font-family: $storyFont;
+      text-align: center;
+      font-size: 16px;
+      &:hover {
+        background-color: #0808e9;
+        box-shadow: 1px 1px 2px blue;
       }
     }
   }
@@ -141,7 +140,318 @@ footer {
   }
 }
 
-// ! All testing
-.testStuff {
-  background-color: red;
+//? Galaxy S5
+@media only screen and (max-device-width: 360px) {
+  // ! Header Section
+  header {
+    div {
+      h1 {
+        font-size: 1.7rem;
+        padding: 1rem 0;
+      }
+    }
+  }
+  // ! Main Story
+  .answer-page {
+    border: $mainBlue 0.3125rem solid;
+    border-radius: 3%;
+    margin: 1rem 0.5rem;
+    padding: 0.6rem;
+
+    .storyBox {
+      padding: 1rem 1rem;
+      border: whitesmoke 0.3125rem solid;
+      border-radius: 3%;
+
+      .title {
+        font-size: 1.3em;
+        border-bottom: #000000dc double 2px;
+        width: 75%;
+        margin-bottom: 1rem;
+      }
+
+      #storyText {
+        width: 100%;
+        font-size: 1em;
+        padding: 0px;
+        padding-bottom: 1rem;
+      }
+
+      .answerButton {
+        background-color: #0000ffdc;
+        color: whitesmoke;
+        text-align: center;
+        width: 100%;
+        padding: 11px;
+        margin: 0.2rem 0.5rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        &:hover {
+          background-color: #0808e9;
+          box-shadow: 1px 1px 2px blue;
+        }
+      }
+
+      // ! Questions
+      #questionText {
+        form {
+          font-size: 0.9rem;
+
+          input {
+            margin-top: 0rem;
+            margin-bottom: 1rem;
+            height: 1.5rem;
+            font-size: 0.8rem;
+            border: 2px solid #00000093;
+          }
+        }
+      }
+      #questionButtons .button {
+        display: block;
+        width: 100%;
+        padding: 11px;
+        margin: 0.2rem 0.5rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        &:hover {
+          box-shadow: 1px 1px 2px blue;
+        }
+      }
+    }
+  }
+  // ! Footer Section
+  footer {
+    width: 100%;
+    margin: 0px;
+    div {
+      h1 {
+        padding: 1.2rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+// ? Pixel 2
+@media only screen and (max-device-width: 411px) {
+  // ! Header Section
+  header {
+    div {
+      h1 {
+        font-size: 1.9rem;
+        padding: 1rem 0;
+      }
+    }
+  }
+  // ! Main Story
+  .answer-page {
+    border-radius: 3%;
+    margin: 1rem 0.5rem;
+    padding: 0.6rem;
+
+    .storyBox {
+      padding: 1rem 1rem;
+      border-radius: 3%;
+
+      .title {
+        font-size: 1.3em;
+        border-bottom: #000000dc double 2px;
+        width: 75%;
+        margin-bottom: 1rem;
+      }
+
+      #storyText {
+        width: 100%;
+        font-size: 1em;
+        padding: 0px;
+        padding-bottom: 1rem;
+      }
+
+      .answerButton {
+        width: 100%;
+        padding: 11px;
+        margin: 0.2rem 0.5rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+      }
+
+      // ! Questions
+      #questionText {
+        form {
+          font-size: 1rem;
+
+          input {
+            margin-top: 0rem;
+            margin-bottom: 1rem;
+            height: 1.5rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
+      #questionButtons .button {
+        width: 100%;
+        padding: 11px;
+        margin: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  // ! Footer Section
+  footer {
+    div {
+      h1 {
+        padding: 1.2rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// ? IPad
+@media only screen and (max-device-width: 768px) {
+  // ! Header Section
+  header {
+    div {
+      h1 {
+        font-size: 3.5rem;
+        padding: 1rem 0;
+      }
+    }
+  }
+  // ! Main Story
+  .answer-page {
+    margin: 2rem;
+    padding: 1rem;
+
+    .storyBox {
+      padding: 1rem 1rem;
+      border-radius: 3%;
+
+      .title {
+        font-size: 3em;
+        border-bottom: #000000dc double 2px;
+        width: 75%;
+        margin-bottom: 1rem;
+      }
+
+      #storyText {
+        width: 100%;
+        font-size: 1.9rem;
+        padding: 0px;
+        padding-bottom: 1rem;
+      }
+
+      .answerButton {
+        width: 100%;
+        padding: 11px;
+        margin: 0.2rem 0.5rem;
+        border-radius: 15px;
+        font-size: 1.3rem;
+      }
+
+      // ! Questions
+      #questionText {
+        form {
+          font-size: 1.7rem;
+
+          input {
+            margin-top: 0rem;
+            margin-bottom: 1rem;
+            height: 2.5rem;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      #questionButtons .button {
+        padding: 1rem 2rem;
+        margin-left: 0.3rem;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  // ! Footer Section
+  footer {
+    div {
+      h1 {
+        padding: 1.2rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+// ? IPad Pro
+@media only screen and (max-device-width: 1024px) {
+  // ! Header Section
+  header {
+    div {
+      h1 {
+        font-size: 6rem;
+        padding: 1rem 0;
+      }
+    }
+  }
+  // ! Main Story
+  .answer-page {
+    margin: 2rem;
+    padding: 1.5rem;
+
+    .storyBox {
+      padding: 1rem;
+      border-radius: 3%;
+
+      .title {
+        font-size: 3.5em;
+        border-bottom: #000000dc double 2px;
+        width: 75%;
+        margin-bottom: 1rem;
+      }
+
+      #storyText {
+        width: 100%;
+        font-size: 2.3rem;
+        padding: 0px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
+
+      .answerButton {
+        width: 100%;
+        padding: 1.5rem 2.6rem;
+        margin: auto;
+        border-radius: 15px;
+        font-size: 1.7rem;
+      }
+
+      // ! Questions
+      #questionText {
+        form {
+          font-size: 2.2rem;
+
+          input {
+            margin-top: 0rem;
+            margin-bottom: 1rem;
+            height: 2.8rem;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      #questionButtons .button {
+        padding: 1.5rem 2.6rem;
+        margin-left: 0.3rem;
+        text-align: center;
+        font-size: 1.7rem;
+      }
+    }
+  }
+  // ! Footer Section
+  footer {
+    div {
+      h1 {
+        padding: 1.2rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
 }

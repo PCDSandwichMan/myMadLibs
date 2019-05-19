@@ -113,11 +113,11 @@ header div h1 {
   margin-bottom: 1rem;
 }
 
-.answer-page .storyBox button:focus {
+.answer-page .storyBox .answerButton:focus {
   outline: 0;
 }
 
-.answer-page .storyBox .button {
+.answer-page .storyBox .answerButton {
   background-color: rgba(0, 0, 255, 0.863);
   color: whitesmoke;
   padding: 1rem 2rem;
@@ -128,19 +128,19 @@ header div h1 {
   width: 25%;
 }
 
-.answer-page .storyBox .button:hover {
+.answer-page .storyBox .answerButton:hover {
   background-color: #0808e9;
   -webkit-box-shadow: 1px 1px 2px blue;
           box-shadow: 1px 1px 2px blue;
   cursor: pointer;
 }
 
-.answer-page .storyBox #questionText button:focus {
+.answer-page .storyBox button:focus {
   outline: 0;
 }
 
-.answer-page .storyBox #questionText .button {
-  background-color: rgba(0, 0, 255, 0.863);
+.answer-page .storyBox .button {
+  background-color: #0000ffdc;
   color: whitesmoke;
   padding: 1rem 2rem;
   margin-left: 0.5rem;
@@ -150,7 +150,7 @@ header div h1 {
   font-size: 16px;
 }
 
-.answer-page .storyBox #questionText .button:hover {
+.answer-page .storyBox .button:hover {
   background-color: #0808e9;
   -webkit-box-shadow: 1px 1px 2px blue;
           box-shadow: 1px 1px 2px blue;
@@ -186,7 +186,239 @@ footer div h1 {
   text-align: center;
 }
 
-.testStuff {
-  background-color: red;
+@media only screen and (max-device-width: 360px) {
+  header div h1 {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+  }
+  .answer-page {
+    border: #1c92e09d 0.3125rem solid;
+    border-radius: 3%;
+    margin: 1rem 0.5rem;
+    padding: 0.6rem;
+  }
+  .answer-page .storyBox {
+    padding: 1rem 1rem;
+    border: whitesmoke 0.3125rem solid;
+    border-radius: 3%;
+  }
+  .answer-page .storyBox .title {
+    font-size: 1.3em;
+    border-bottom: #000000dc double 2px;
+    width: 75%;
+    margin-bottom: 1rem;
+  }
+  .answer-page .storyBox #storyText {
+    width: 100%;
+    font-size: 1em;
+    padding: 0px;
+    padding-bottom: 1rem;
+  }
+  .answer-page .storyBox .answerButton {
+    background-color: #0000ffdc;
+    color: whitesmoke;
+    text-align: center;
+    width: 100%;
+    padding: 11px;
+    margin: 0.2rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+  .answer-page .storyBox .answerButton:hover {
+    background-color: #0808e9;
+    -webkit-box-shadow: 1px 1px 2px blue;
+            box-shadow: 1px 1px 2px blue;
+  }
+  .answer-page .storyBox #questionText form {
+    font-size: 0.9rem;
+  }
+  .answer-page .storyBox #questionText form input {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    border: 2px solid #00000093;
+  }
+  .answer-page .storyBox #questionButtons .button {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    margin: 0.2rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+  .answer-page .storyBox #questionButtons .button:hover {
+    -webkit-box-shadow: 1px 1px 2px blue;
+            box-shadow: 1px 1px 2px blue;
+  }
+  footer {
+    width: 100%;
+    margin: 0px;
+  }
+  footer div h1 {
+    padding: 1.2rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-device-width: 411px) {
+  header div h1 {
+    font-size: 1.9rem;
+    padding: 1rem 0;
+  }
+  .answer-page {
+    border-radius: 3%;
+    margin: 1rem 0.5rem;
+    padding: 0.6rem;
+  }
+  .answer-page .storyBox {
+    padding: 1rem 1rem;
+    border-radius: 3%;
+  }
+  .answer-page .storyBox .title {
+    font-size: 1.3em;
+    border-bottom: #000000dc double 2px;
+    width: 75%;
+    margin-bottom: 1rem;
+  }
+  .answer-page .storyBox #storyText {
+    width: 100%;
+    font-size: 1em;
+    padding: 0px;
+    padding-bottom: 1rem;
+  }
+  .answer-page .storyBox .answerButton {
+    width: 100%;
+    padding: 11px;
+    margin: 0.2rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+  .answer-page .storyBox #questionText form {
+    font-size: 1rem;
+  }
+  .answer-page .storyBox #questionText form input {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+  .answer-page .storyBox #questionButtons .button {
+    width: 100%;
+    padding: 11px;
+    margin: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  footer div h1 {
+    padding: 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  header div h1 {
+    font-size: 3.5rem;
+    padding: 1rem 0;
+  }
+  .answer-page {
+    margin: 2rem;
+    padding: 1rem;
+  }
+  .answer-page .storyBox {
+    padding: 1rem 1rem;
+    border-radius: 3%;
+  }
+  .answer-page .storyBox .title {
+    font-size: 3em;
+    border-bottom: #000000dc double 2px;
+    width: 75%;
+    margin-bottom: 1rem;
+  }
+  .answer-page .storyBox #storyText {
+    width: 100%;
+    font-size: 1.9rem;
+    padding: 0px;
+    padding-bottom: 1rem;
+  }
+  .answer-page .storyBox .answerButton {
+    width: 100%;
+    padding: 11px;
+    margin: 0.2rem 0.5rem;
+    border-radius: 15px;
+    font-size: 1.3rem;
+  }
+  .answer-page .storyBox #questionText form {
+    font-size: 1.7rem;
+  }
+  .answer-page .storyBox #questionText form input {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+  .answer-page .storyBox #questionButtons .button {
+    padding: 1rem 2rem;
+    margin-left: 0.3rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  footer div h1 {
+    padding: 1.2rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) {
+  header div h1 {
+    font-size: 6rem;
+    padding: 1rem 0;
+  }
+  .answer-page {
+    margin: 2rem;
+    padding: 1.5rem;
+  }
+  .answer-page .storyBox {
+    padding: 1rem;
+    border-radius: 3%;
+  }
+  .answer-page .storyBox .title {
+    font-size: 3.5em;
+    border-bottom: #000000dc double 2px;
+    width: 75%;
+    margin-bottom: 1rem;
+  }
+  .answer-page .storyBox #storyText {
+    width: 100%;
+    font-size: 2.3rem;
+    padding: 0px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .answer-page .storyBox .answerButton {
+    width: 100%;
+    padding: 1.5rem 2.6rem;
+    margin: auto;
+    border-radius: 15px;
+    font-size: 1.7rem;
+  }
+  .answer-page .storyBox #questionText form {
+    font-size: 2.2rem;
+  }
+  .answer-page .storyBox #questionText form input {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    height: 2.8rem;
+    font-size: 1.5rem;
+  }
+  .answer-page .storyBox #questionButtons .button {
+    padding: 1.5rem 2.6rem;
+    margin-left: 0.3rem;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  footer div h1 {
+    padding: 1.2rem;
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
